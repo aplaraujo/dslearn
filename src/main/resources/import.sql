@@ -17,3 +17,7 @@ INSERT INTO tb_course (name, img_uri, img_gray_uri) VALUES ('Curso de HTML', 'ht
 
 INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('1.0', TIMESTAMP '2020-11-20T03:00:00', TIMESTAMP '2021-11-20T03:00:00', 1);
 INSERT INTO tb_offer (edition, start_moment, end_moment, course_id) VALUES ('2.0', TIMESTAMP '2021-12-20T03:00:00', TIMESTAMP '2022-11-20T03:00:00', 1);
+
+INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) VALUES ('Trilha de HTML', 'Trilha principal do curso de HTML', 1, 'https://upload.wikimedia.org/wikipedia/commons/d/de/HTML5_oval_logo.png', 1, 1);
+INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) VALUES ('Forum', 'Forum de discussão do curso', 2, 'https://upload.wikimedia.org/wikipedia/commons/d/de/HTML5_oval_logo.png', 2, 1);
+INSERT INTO tb_resource (title, description, position, img_uri, type, offer_id) VALUES ('Lives', 'Transmissões ao vivo do curso', 3, 'https://upload.wikimedia.org/wikipedia/commons/d/de/HTML5_oval_logo.png', 0, 1);
