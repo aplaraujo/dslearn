@@ -2,9 +2,7 @@ package com.example.dslearn.entities;
 
 import jakarta.persistence.*;
 
-import java.util.HashSet;
-import java.util.Objects;
-import java.util.Set;
+import java.util.*;
 
 @Entity
 @Table(name = "tb_user")
@@ -20,6 +18,9 @@ public class User {
     @ManyToMany
     @JoinTable(name = "tb_user_role", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
     private final Set<Role> roles = new HashSet<>();
+
+    @OneToMany(mappedBy = "user")
+    private final List<Notification> notifications = new ArrayList<>();
 
     public User() {}
 
@@ -64,6 +65,10 @@ public class User {
 
     public Set<Role> getRoles() {
         return roles;
+    }
+
+    public List<Notification> getNotifications() {
+        return notifications;
     }
 
     @Override
